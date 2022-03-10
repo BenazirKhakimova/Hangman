@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  font-family: "Acme", sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    196deg,
+    rgba(1, 4, 52, 1) 0%,
+    rgba(3, 23, 69, 1) 5%,
+    rgba(9, 67, 107, 1) 24%,
+    rgba(11, 80, 119, 1) 40%,
+    rgba(16, 124, 157, 1) 63%,
+    rgba(25, 195, 219, 1) 85%
+  );
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+h1 {
+  margin: 20px 0 0;
+}
+
+.game-container {
+  padding: 20px 30px;
+  position: relative;
+  margin-right: 10%;
+  height: 350px;
+  width: 910px;
+}
+
+.figure-container {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  margin-left: 20%;
+}
+
+.figure-part {
+  display: none;
+}
+
+.display-description-container {
+  position: absolute;
+  top: 20px;
+  right: 10%;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.word {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 10%;
+}
+
+.letter {
+  border-bottom: 3px solid #166296;
+  display: inline-flex;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3px;
+  height: 50px;
+  width: 20px;
+}
+#btn-start {
+  cursor: pointer;
+  background-color: #fff;
+  color: #2980b9;
+  border: 0;
+  margin-bottom: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  background-color: #2980b9;
+  border-radius: 5px;
+  box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.popup button {
+  cursor: pointer;
+  background-color: #fff;
+  color: #2980b9;
+  border: 0;
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+.popup button:active {
+  transform: scale(0.98);
+}
+
+.popup button:focus {
+  outline: 0;
+}
+
+.notification-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px 10px 0 0;
+  padding: 15px 20px;
+  position: absolute;
+  bottom: -50px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.notification-container p {
+  margin: 0;
+}
+
+.notification-container.show {
+  transform: translateY(-50px);
+}
